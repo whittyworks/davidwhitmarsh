@@ -4,463 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David G Whitmarsh - Professional Resume</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #0066ff 0%, #00d4ff 100%);
-            background-attachment: fixed;
-        }
-
-        .header {
-            padding: 80px 20px 60px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.15)"/></svg>');
-            animation: float 20s linear infinite;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-100px); }
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .header h1 {
-            font-size: 3.5em;
-            margin-bottom: 15px;
-            font-weight: 800;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-            letter-spacing: -1px;
-        }
-
-        .tagline {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            color: white;
-            font-weight: 300;
-        }
-
-        .dream-text {
-            font-size: 1.2em;
-            color: #ff6b35;
-            font-style: italic;
-            margin-bottom: 35px;
-            font-weight: 600;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-        }
-
-        .download-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
-            color: white;
-            padding: 18px 45px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.15em;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
-            border: 3px solid white;
-        }
-
-        .download-btn:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 12px 35px rgba(255, 107, 53, 0.6);
-            background: linear-gradient(135deg, #ff8c42 0%, #ff6b35 100%);
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: -40px auto 0;
-            padding: 20px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .section {
-            background: white;
-            margin: 30px 0;
-            padding: 45px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
-        }
-
-        .section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background: linear-gradient(180deg, #0066ff 0%, #ff6b35 100%);
-        }
-
-        .section h2 {
-            color: #0066ff;
-            font-size: 2em;
-            margin-bottom: 25px;
-            font-weight: 700;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .section h2::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 10px;
-            height: 10px;
-            background: #ff6b35;
-            border-radius: 50%;
-        }
-
-        .summary {
-            font-size: 1.15em;
-            line-height: 1.9;
-            color: #444;
-            background: linear-gradient(135deg, #e3f2ff 0%, #fff5f0 100%);
-            padding: 25px;
-            border-radius: 12px;
-            border-left: 4px solid #ff6b35;
-        }
-
-        .experience-item {
-            margin-bottom: 35px;
-            padding: 25px;
-            background: linear-gradient(135deg, #f0f7ff 0%, #fff9f5 100%);
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .experience-item:hover {
-            border-color: #0066ff;
-            transform: translateX(5px);
-            box-shadow: 0 5px 20px rgba(0, 102, 255, 0.15);
-        }
-
-        .experience-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 12px;
-            flex-wrap: wrap;
-        }
-
-        .job-title {
-            font-size: 1.4em;
-            font-weight: 700;
-            color: #0066ff;
-            margin-bottom: 5px;
-        }
-
-        .company {
-            color: #ff6b35;
-            font-weight: 600;
-            font-size: 1.1em;
-        }
-
-        .date {
-            color: #666;
-            font-size: 0.95em;
-            font-weight: 500;
-            background: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            border: 2px solid #e3f2ff;
-        }
-
-        .experience-item ul {
-            margin-left: 20px;
-            margin-top: 12px;
-        }
-
-        .experience-item li {
-            margin-bottom: 10px;
-            color: #555;
-            line-height: 1.7;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 25px;
-        }
-
-        .skill-category {
-            background: linear-gradient(135deg, #0066ff 0%, #0088ff 100%);
-            padding: 25px;
-            border-radius: 15px;
-            color: white;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skill-category::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(255,107,53,0.3) 0%, transparent 70%);
-            transition: all 0.5s ease;
-        }
-
-        .skill-category:hover {
-            transform: scale(1.05);
-            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
-        }
-
-        .skill-category:hover::after {
-            top: 0;
-            right: 0;
-        }
-
-        .skill-category h3 {
-            font-size: 1.3em;
-            margin-bottom: 15px;
-            font-weight: 700;
-            position: relative;
-            z-index: 1;
-        }
-
-        .skill-category ul {
-            list-style: none;
-            position: relative;
-            z-index: 1;
-        }
-
-        .skill-category li {
-            padding: 8px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .skill-category li:before {
-            content: "⚡";
-            position: absolute;
-            left: 0;
-            font-size: 1.1em;
-        }
-
-        .highlights-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 25px;
-        }
-
-        .highlight-card {
-            padding: 30px;
-            background: white;
-            border-radius: 15px;
-            border: 3px solid #e3f2ff;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .highlight-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, #0066ff 0%, #ff6b35 100%);
-        }
-
-        .highlight-card:hover {
-            border-color: #ff6b35;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
-        }
-
-        .highlight-icon {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
-        }
-
-        .highlight-card h3 {
-            color: #0066ff;
-            margin-bottom: 12px;
-            font-size: 1.3em;
-            font-weight: 700;
-        }
-
-        .highlight-card p {
-            color: #555;
-            font-size: 1em;
-            line-height: 1.7;
-        }
-
-        .highlight-card strong {
-            color: #ff6b35;
-        }
-
-        .highlight-card a {
-            color: #0066ff;
-            text-decoration: none;
-            font-weight: 600;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.3s ease;
-        }
-
-        .highlight-card a:hover {
-            border-bottom-color: #ff6b35;
-            color: #ff6b35;
-        }
-
-        .contact-section {
-            text-align: center;
-            padding: 60px 20px;
-            background: white;
-            margin: 30px 0;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: linear-gradient(90deg, #0066ff 0%, #ff6b35 50%, #0066ff 100%);
-        }
-
-        .contact-section h2 {
-            color: #0066ff;
-            margin-bottom: 15px;
-            font-size: 2.2em;
-            font-weight: 700;
-        }
-
-        .contact-section p {
-            color: #666;
-            font-size: 1.1em;
-            margin-bottom: 30px;
-        }
-
-        .contact-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #0066ff 0%, #00d4ff 100%);
-            color: white;
-            padding: 18px 45px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1em;
-            transition: all 0.3s ease;
-            margin: 10px;
-            box-shadow: 0 5px 20px rgba(0, 102, 255, 0.4);
-        }
-
-        .contact-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(0, 102, 255, 0.6);
-            background: linear-gradient(135deg, #00d4ff 0%, #0066ff 100%);
-        }
-
-        .contact-btn.orange {
-            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
-            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.4);
-        }
-
-        .contact-btn.orange:hover {
-            background: linear-gradient(135deg, #ff8c42 0%, #ff6b35 100%);
-            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.6);
-        }
-
-        .footer {
-            text-align: center;
-            padding: 30px;
-            color: white;
-            font-size: 0.95em;
-        }
-
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.5em;
-            }
-            
-            .section {
-                padding: 30px;
-            }
-
-            .experience-header {
-                flex-direction: column;
-            }
-
-            .date {
-                margin-top: 10px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">David G Whitmarsh</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="writings.html">Writing</a></li>
+                <li><a href="http://holyworkmovement.com" target="_blank">HolyWork Movement</a></li>
+                <li><a href="https://calendly.com/davidgwhitmarsh/30min" class="nav-cta">Schedule Meeting</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
             <h1>David G Whitmarsh</h1>
-            <div class="tagline">Business Development Consultant • Sales Leader • Author</div>
-            <div class="dream-text">"Dare to Keep Dreaming"</div>
-            <a href="#" class="download-btn">📄 Download My Resume</a>
+            <p class="tagline">Business Development Consultant • Sales Leader • Author</p>
+            <p class="dream-text">"Dare to Keep Dreaming"</p>
+            <a href="#" class="download-btn">Download My Resume</a>
         </div>
     </div>
 
     <div class="container">
-        <div class="section">
+        <section class="section">
             <h2>About Me</h2>
             <div class="summary">
                 I'm a passionate entrepreneur and business developer who's worked everywhere from Fortune 25 giants to scrappy startups. As a Catholic husband, father of six, and career coach, I bring a unique perspective that bridges the corporate and entrepreneurial worlds. My mission? Help businesses grow while helping people discover their true calling.
             </div>
-        </div>
+        </section>
 
-        <div class="section">
+        <section class="section">
             <h2>Professional Journey</h2>
             
             <div class="experience-item">
@@ -472,9 +49,9 @@
                     <div class="date">2020 - Present</div>
                 </div>
                 <ul>
-                    <li>🎯 Advise enterprises and startups on business development strategy and growth opportunities</li>
-                    <li>💡 Apply cross-sector expertise to create competitive advantages for clients</li>
-                    <li>🚀 Specialize in sales strategy, market positioning, and creative problem-solving</li>
+                    <li>Advise enterprises and startups on business development strategy and growth opportunities</li>
+                    <li>Apply cross-sector expertise to create competitive advantages for clients</li>
+                    <li>Specialize in sales strategy, market positioning, and creative problem-solving</li>
                 </ul>
             </div>
 
@@ -487,9 +64,9 @@
                     <div class="date">2018 - Present</div>
                 </div>
                 <ul>
-                    <li>🙏 Guide professionals through career transitions and vocational discovery</li>
-                    <li>✍️ Regular contributor to Catholic Professional on career topics</li>
-                    <li>🎤 Specialize in integrating faith and professional life</li>
+                    <li>Guide professionals through career transitions and vocational discovery</li>
+                    <li>Regular contributor to Catholic Professional on career topics</li>
+                    <li>Specialize in integrating faith and professional life</li>
                 </ul>
             </div>
 
@@ -502,15 +79,15 @@
                     <div class="date">2005 - 2020</div>
                 </div>
                 <ul>
-                    <li>📈 Led business development initiatives across enterprise and startup environments</li>
-                    <li>💼 Developed and executed sales strategies for diverse market segments</li>
-                    <li>🤝 Built lasting relationships with key stakeholders and decision-makers</li>
+                    <li>Led business development initiatives across enterprise and startup environments</li>
+                    <li>Developed and executed sales strategies for diverse market segments</li>
+                    <li>Built lasting relationships with key stakeholders and decision-makers</li>
                 </ul>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
-            <h2>What I Bring to the Table</h2>
+        <section class="section">
+            <h2>Core Competencies</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Business Development</h3>
@@ -543,15 +120,15 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
+        <section class="section">
             <h2>Beyond the Resume</h2>
             <div class="highlights-grid">
                 <div class="highlight-card">
                     <div class="highlight-icon">📚</div>
                     <h3>Published Author</h3>
-                    <p><strong><em>In Defense of Lentils</em></strong> explores my personal journey from misguided purpose to embracing joy and vocation. <a href="https://a.co/d/8mxyOeP" target="_blank">Available on Amazon</a></p>
+                    <p><strong>In Defense of Lentils</strong> explores my personal journey from misguided purpose to embracing joy and vocation. <a href="writings.html">Read more about my writing</a></p>
                 </div>
                 <div class="highlight-card">
                     <div class="highlight-icon">🎤</div>
@@ -564,18 +141,22 @@
                     <p>Co-founder of the <a href="http://holyworkmovement.com" target="_blank">HolyWork Movement</a>, supporting professionals in prayer and career discernment.</p>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="contact-section">
+        <section class="contact-section">
             <h2>Let's Connect</h2>
             <p>Whether you need consulting, coaching, or just want to chat over virtual coffee...</p>
-            <a href="https://calendly.com/davidgwhitmarsh/30min" class="contact-btn">☕ Schedule a Meeting</a>
-            <a href="#" class="contact-btn orange">📄 Download Full Resume</a>
-        </div>
+            <div class="contact-buttons">
+                <a href="https://calendly.com/davidgwhitmarsh/30min" class="contact-btn primary">Schedule a Meeting</a>
+                <a href="#" class="contact-btn secondary">Download Full Resume</a>
+            </div>
+        </section>
     </div>
 
-    <div class="footer">
-        <p>© 2025 David G Whitmarsh • Keep Dreaming, Keep Building</p>
-    </div>
+    <footer class="footer">
+        <p>&copy; 2025 David G Whitmarsh • Keep Dreaming, Keep Building</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
