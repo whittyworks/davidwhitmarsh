@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Times New Roman', serif;
     line-height: 1.6;
     color: #333;
     background: #ffffff;
@@ -83,15 +83,15 @@ body {
 /* Hero Section */
 .hero-section {
     position: relative;
-    height: 100vh;
-    min-height: 600px;
+    height: 60vh;
+    min-height: 450px;
+    max-height: 550px;
     background: linear-gradient(135deg, #2c5f7c 0%, #4a8ba8 50%, #87ceeb 100%);
     background-image: 
         linear-gradient(to bottom, rgba(44, 95, 124, 0.75), rgba(74, 139, 168, 0.85)),
         url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><path d="M0,400 Q200,320 400,380 T800,400 T1200,360 L1200,800 L0,800 Z" fill="%23ffffff" opacity="0.12"/><path d="M0,480 Q250,420 500,460 T1000,480 T1200,450 L1200,800 L0,800 Z" fill="%23ffffff" opacity="0.08"/><circle cx="150" cy="180" r="60" fill="%23ffffff" opacity="0.05"/><circle cx="1000" cy="220" r="80" fill="%23ffffff" opacity="0.06"/></svg>');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -207,61 +207,45 @@ section {
     background: white;
 }
 
-.skills-bars {
-    max-width: 700px;
-    margin: 0 auto;
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
 }
 
-.skill-bar {
-    margin-bottom: 35px;
+.expertise-card {
+    background: #fafafa;
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
-.skill-bar:last-child {
-    margin-bottom: 0;
+.expertise-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border-color: #2c5f7c;
+    background: white;
 }
 
-.skill-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+.expertise-icon {
+    font-size: 3.5em;
+    margin-bottom: 20px;
 }
 
-.skill-name {
-    font-size: 1.1em;
-    font-weight: 600;
-    color: #333;
-}
-
-.skill-percent {
-    font-size: 1.1em;
+.expertise-card h3 {
+    color: #2c5f7c;
+    font-size: 1.4em;
+    margin-bottom: 15px;
     font-weight: 700;
-    color: #ff8c42;
 }
 
-.skill-progress {
-    height: 12px;
-    background: #e9ecef;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.skill-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #2c5f7c 0%, #4a8ba8 100%);
-    border-radius: 10px;
-    transition: width 1s ease-out;
-    position: relative;
-}
-
-.skill-fill::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 20px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3));
+.expertise-card p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1.05em;
 }
 
 /* Experience Section */
@@ -881,7 +865,8 @@ section {
     }
     
     .hero-section {
-        min-height: 500px;
+        min-height: 400px;
+        max-height: 450px;
     }
 
     .container-narrow {
