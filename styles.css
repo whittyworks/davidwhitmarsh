@@ -39,19 +39,27 @@ nav {
 .nav-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
     font-family: 'Crimson Pro', serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--navy);
     text-decoration: none;
     letter-spacing: -0.5px;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
 }
 
 .nav-links {
@@ -158,6 +166,184 @@ nav {
     opacity: 0.9;
 }
 
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* About Section */
+.about-section {
+    background: white;
+    padding: 6rem 2rem;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(26, 58, 82, 0.15);
+}
+
+.about-content h2 {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: var(--charcoal);
+}
+
+/* Book Section */
+.book-section {
+    background: linear-gradient(135deg, var(--light-blue) 0%, var(--cream) 100%);
+    padding: 6rem 2rem;
+}
+
+.book-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.book-cover img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 25px 70px rgba(26, 58, 82, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.book-cover img:hover {
+    transform: scale(1.02);
+}
+
+.book-content h2 {
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.book-subtitle {
+    font-size: 1.2rem;
+    color: var(--steel-blue);
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.book-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: var(--charcoal);
+}
+
+.book-highlights {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.highlight-icon {
+    color: var(--accent-blue);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* HolyWork Section */
+.holywork-section {
+    background: white;
+    padding: 6rem 2rem;
+}
+
+.holywork-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.holywork-logo {
+    margin-bottom: 2rem;
+}
+
+.holywork-logo img {
+    width: 200px;
+    height: auto;
+}
+
+.holywork-content h2 {
+    margin-bottom: 1rem;
+}
+
+.holywork-tagline {
+    font-size: 1.3rem;
+    color: var(--steel-blue);
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.holywork-content p {
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.8;
+    color: var(--charcoal);
+}
+
+.holywork-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin: 3rem 0;
+}
+
+.feature {
+    background: var(--light-blue);
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature h3 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.5rem;
+    color: var(--navy);
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
 /* Section Styling */
 section {
     max-width: 1400px;
@@ -175,7 +361,11 @@ section {
     letter-spacing: -1px;
 }
 
-/* Services Grid */
+/* Services Section */
+.services-section {
+    background: var(--cream);
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -213,6 +403,16 @@ section {
 .service-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(58, 124, 165, 0.15);
+}
+
+.service-logo {
+    margin-bottom: 1.5rem;
+}
+
+.service-logo img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
 }
 
 .service-icon {
@@ -260,6 +460,23 @@ section {
     left: 0;
     color: var(--accent-blue);
     font-weight: 700;
+}
+
+.service-specialties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.specialty {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--light-blue);
+    color: var(--navy);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
 }
 
 .btn {
@@ -473,6 +690,31 @@ footer {
     padding: 3rem 2rem;
 }
 
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    height: 60px;
+    width: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-logo:hover {
+    opacity: 1;
+}
+
 footer p {
     margin-bottom: 0.5rem;
 }
@@ -485,6 +727,29 @@ footer p {
     font-size: 1.5rem;
     color: var(--navy);
     cursor: pointer;
+}
+
+@media (max-width: 968px) {
+    .about-container,
+    .book-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .book-cover img {
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .about-content h2,
+    .book-content h2 {
+        text-align: center;
+    }
+
+    .holywork-features {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -514,6 +779,11 @@ footer p {
         min-height: 70vh;
     }
 
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .services-grid,
     .blog-grid,
     .contact-grid {
@@ -522,6 +792,22 @@ footer p {
 
     .newsletter-form {
         flex-direction: column;
+    }
+
+    .footer-logos {
+        gap: 2rem;
+    }
+
+    .footer-logo {
+        height: 50px;
+    }
+
+    .logo span {
+        display: none;
+    }
+
+    .logo-img {
+        height: 40px;
     }
 }
 
