@@ -3,203 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David G Whitmarsh - Professional Resume</title>
+    <title>David G Whitmarsh - Dare to Keep Dreaming</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
+    <!-- Navigation -->
+    <nav>
         <div class="nav-container">
-            <a href="#hero" class="nav-logo">David G Whitmarsh</a>
-            <ul class="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            <a href="#" class="logo">David G Whitmarsh</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#writing">Writing</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <section id="hero" class="hero-section">
-        <div class="hero-overlay"></div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
         <div class="hero-content">
-            <h1>David G Whitmarsh</h1>
-            <p class="hero-tagline">Business Development Consultant. Career Coach. Catholic Author & Speaker.</p>
-            <p class="dream-text">"Dare to Keep Dreaming"</p>
-            <a href="#resume.pdf" class="download-btn">Download Resume</a>
+            <h1>Dare to Keep Dreaming</h1>
+            <p class="hero-subtitle">Howdy, I'm David</p>
+            <p class="hero-description">
+                A passionate Catholic husband and father of six, I bring a unique hybrid perspective 
+                as a consultant, author, speaker, and coach—helping you discover where God is calling 
+                you next in your career and business.
+            </p>
         </div>
     </section>
 
-    <div class="main-content">
-        <section id="about" class="about-section">
-            <div class="container-narrow">
-                <h2 class="section-title">Background</h2>
-                <p class="intro-text">A passionate entrepreneur and business developer who's worked everywhere from Fortune 25 giants to scrappy startups. As a Catholic husband, father of six, and career coach, I bring a unique perspective that bridges the corporate and entrepreneurial worlds.</p>
-                <p class="intro-text">Having been an entrepreneur and worked with many large and small enterprises on an array of business development projects throughout my career, I bring a unique hybrid perspective to the projects I consult on. How would a Fortune 25, or a medium business, or a solopreneur, or a startup sell your product? My diverse experience in all of these sectors can be your competitive advantage.</p>
+    <!-- Services Section -->
+    <section id="services">
+        <h2 class="section-title">How I Can Help</h2>
+        <div class="services-grid">
+            <!-- Consultant Card -->
+            <div class="service-card fade-in">
+                <span class="service-icon">💼</span>
+                <h3>Consultant</h3>
+                <p>
+                    Having been an entrepreneur and worked with many large and small enterprises on an array 
+                    of business development projects throughout my career, I bring a unique hybrid perspective 
+                    to projects I consult on.
+                </p>
+                <p>
+                    How would a Fortune 25, or a medium business, or a solopreneur, or a start-up sell your 
+                    product? My diverse experience in all of these sectors can be your competitive advantage.
+                </p>
+                <a href="http://whittyendeavors.com" class="btn" target="_blank" rel="noopener">Whitty Endeavors</a>
             </div>
-        </section>
 
-        <section id="expertise" class="expertise-section">
-            <div class="container-narrow">
-                <h2 class="section-title">Areas of Expertise</h2>
-                <div class="expertise-grid">
-                    <div class="expertise-card">
-                        <div class="expertise-icon">📊</div>
-                        <h3>Business Development</h3>
-                        <p>Strategic planning, market analysis, growth strategy, and partnership development across Fortune 25 and startup environments.</p>
-                    </div>
-                    <div class="expertise-card">
-                        <div class="expertise-icon">💼</div>
-                        <h3>Sales Leadership</h3>
-                        <p>Enterprise sales, team building, consultative selling, client relations, and proven revenue growth strategies.</p>
-                    </div>
-                    <div class="expertise-card">
-                        <div class="expertise-icon">🎯</div>
-                        <h3>Career Coaching</h3>
-                        <p>Vocational discernment, career transitions, and helping professionals integrate faith with their work life.</p>
-                    </div>
-                    <div class="expertise-card">
-                        <div class="expertise-icon">🎤</div>
-                        <h3>Public Speaking</h3>
-                        <p>Keynotes and workshops on sales, career discernment, faith in business, and work-life integration.</p>
-                    </div>
+            <!-- Author Card -->
+            <div class="service-card fade-in">
+                <span class="service-icon">📚</span>
+                <h3>Author</h3>
+                <p>
+                    Author of <em>In Defense of Lentils</em>, a book about my personal journey from a life 
+                    of misguided purpose to embracing my vocation of joy.
+                </p>
+                <p>
+                    Writer for the Catholic Professional on topics of Career Discernment and Spiritual 
+                    Direction in the midst of a secular career.
+                </p>
+                <a href="https://a.co/d/8mxyOeP" class="btn" target="_blank" rel="noopener">My Book on Amazon</a>
+            </div>
+
+            <!-- Speaker Card -->
+            <div class="service-card fade-in">
+                <span class="service-icon">🎤</span>
+                <h3>Speaker</h3>
+                <p>
+                    My foray into public speaking began at 15 years old and I have thoroughly enjoyed it 
+                    ever since. Having presented to large audiences of several thousand folks and to 
+                    tradeshow floors of 8 people, I can truly say I have a passion for public speaking.
+                </p>
+                <div class="expanded-content">
+                    <p><strong>Available topics include:</strong></p>
+                    <ul>
+                        <li>Sales as a Catholic</li>
+                        <li>WFH & Homeschooling</li>
+                        <li>Career Discernment</li>
+                        <li>Prayer During Unemployment (my favorite!)</li>
+                    </ul>
+                </div>
+                <a href="http://holyworkmovement.com" class="btn" target="_blank" rel="noopener">HolyWork Movement</a>
+            </div>
+
+            <!-- Coach Card -->
+            <div class="service-card fade-in">
+                <span class="service-icon">🌟</span>
+                <h3>Coach</h3>
+                <p>
+                    A passionate Catholic husband and father of six, I am a creative business developer. 
+                    Working as an entrepreneur and in sales for large and small businesses alike, I am 
+                    uniquely adept at uncovering opportunities for growth.
+                </p>
+                <p>
+                    If you are discerning where God is calling you next in your career, I would be honored 
+                    to be a resource and friend for your journey.
+                </p>
+                <a href="https://calendly.com/davidgwhitmarsh/30min" class="btn" target="_blank" rel="noopener">Book a Meeting</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <blockquote>Believe you can and you're halfway there.</blockquote>
+        <cite>— Theodore Roosevelt</cite>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section" id="writing">
+        <h2 class="section-title">My Blog</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto; color: var(--charcoal);">
+            Exploring the intersection of faith, business, and authentic living. 
+            Join me on the journey of career discernment and spiritual direction.
+        </p>
+        <div class="blog-grid">
+            <div class="blog-card fade-in">
+                <div class="blog-card-image">✍️</div>
+                <div class="blog-card-content">
+                    <h3>Recent Articles</h3>
+                    <p>Subscribe to stay updated with my latest thoughts on faith, career, and purpose.</p>
+                    <a href="#newsletter" class="btn-secondary btn">Subscribe</a>
                 </div>
             </div>
-        </section>
-
-        <section id="experience" class="experience-section">
-            <div class="container-narrow">
-                <h2 class="section-title">Professional Journey</h2>
-                
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3>Founder & Principal Consultant</h3>
-                                <span class="timeline-company">Whitty Endeavors</span>
-                            </div>
-                            <span class="timeline-date">2020 - Present</span>
-                            <p>Provide business development consulting for enterprises and startups across multiple sectors. Specialize in sales strategy, growth planning, and market positioning. Apply cross-sector experience to deliver competitive advantages to clients.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3>Career Discernment Coach</h3>
-                                <span class="timeline-company">Independent Practice</span>
-                            </div>
-                            <span class="timeline-date">2018 - Present</span>
-                            <p>Guide professionals through career transitions and vocational discernment. Specialize in supporting professionals balancing faith and career. Regular contributor to Catholic Professional on career topics.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3>Sales & Business Development Leader</h3>
-                                <span class="timeline-company">Fortune 25 & Mid-Market Companies</span>
-                            </div>
-                            <span class="timeline-date">2005 - 2020</span>
-                            <p>Led business development initiatives across enterprise and startup environments. Developed and executed sales strategies for diverse market segments. Built lasting relationships with key stakeholders and decision-makers.</p>
-                        </div>
-                    </div>
+            <div class="blog-card fade-in">
+                <div class="blog-card-image">🙏</div>
+                <div class="blog-card-content">
+                    <h3>Featured Topics</h3>
+                    <p>Career discernment, prayer in work, and finding joy in your vocation.</p>
                 </div>
             </div>
-        </section>
-
-        <section id="portfolio" class="portfolio-section">
-            <div class="container-narrow">
-                <h2 class="section-title">Portfolio & Projects</h2>
-                <div class="portfolio-grid">
-                    <a href="https://a.co/d/8mxyOeP" target="_blank" class="portfolio-card">
-                        <div class="portfolio-image">
-                            <div class="portfolio-overlay">
-                                <span class="portfolio-icon">📚</span>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>In Defense of Lentils</h3>
-                            <p>A personal journey exploring joy, vocation, and faith through conversations with a homeless man.</p>
-                        </div>
-                    </a>
-
-                    <a href="http://holyworkmovement.com" target="_blank" class="portfolio-card">
-                        <div class="portfolio-image">
-                            <div class="portfolio-overlay">
-                                <span class="portfolio-icon">🙏</span>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>HolyWork Movement</h3>
-                            <p>Co-founder of a community supporting professionals in prayer and career discernment.</p>
-                        </div>
-                    </a>
-
-                    <a href="http://whittyendeavors.com" target="_blank" class="portfolio-card">
-                        <div class="portfolio-image">
-                            <div class="portfolio-overlay">
-                                <span class="portfolio-icon">💼</span>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Whitty Endeavors</h3>
-                            <p>Business development consulting for enterprises, startups, and everything in between.</p>
-                        </div>
-                    </a>
-
-                    <div class="portfolio-card speaking-card">
-                        <div class="portfolio-image">
-                            <div class="portfolio-overlay">
-                                <span class="portfolio-icon">🎤</span>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Speaking Engagements</h3>
-                            <p>Topics include Sales as a Catholic, Career Discernment, Prayer During Unemployment, and WFH & Homeschooling.</p>
-                        </div>
-                    </div>
+            <div class="blog-card fade-in">
+                <div class="blog-card-image">💡</div>
+                <div class="blog-card-content">
+                    <h3>Insights & Reflections</h3>
+                    <p>Practical wisdom from the intersection of faith and professional life.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact" class="contact-section">
-            <div class="container-narrow">
-                <h2 class="section-title">Get in Touch</h2>
-                <p class="contact-intro">Whether you need consulting, coaching, or just want to chat over virtual coffee, I'd love to connect.</p>
-                
-                <div class="contact-options">
-                    <div class="contact-card">
-                        <h3>Schedule a Meeting</h3>
-                        <p>Book a time on my calendar for a conversation.</p>
-                        <a href="https://calendly.com/davidgwhitmarsh/30min" class="contact-btn primary">View Calendar</a>
-                    </div>
-                    <div class="contact-card">
-                        <h3>Download Resume</h3>
-                        <p>Get the full details of my professional experience.</p>
-                        <a href="#resume.pdf" class="contact-btn secondary">Download PDF</a>
-                    </div>
-                </div>
-
-                <form class="contact-form">
-                    <div class="form-row">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
-                    <button type="submit" class="submit-btn">Send Message</button>
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="contact-grid">
+            <div class="contact-card fade-in">
+                <h3>☕ Book a Coffee Chat</h3>
+                <p>Schedule a 30-minute Zoom coffee with me to discuss your career, business, or speaking needs.</p>
+                <a href="https://calendly.com/davidgwhitmarsh/30min" class="btn" target="_blank" rel="noopener">Book Now</a>
+            </div>
+            <div class="contact-card fade-in" id="newsletter">
+                <h3>📬 Subscribe to My Blog</h3>
+                <p>Sign up to be notified when a new article drops.</p>
+                <form class="newsletter-form" action="#" method="post">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Sign Up</button>
                 </form>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <footer class="footer">
-        <p>&copy; 2025 David G Whitmarsh • Keep Dreaming, Keep Building</p>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 David G Whitmarsh - All Rights Reserved</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">
+            Dare to Keep Dreaming
+        </p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
