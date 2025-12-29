@@ -73,3 +73,27 @@ if (newsletterForm) {
         e.target.reset();
     });
 }
+
+// Flying Bird Animation on Scroll
+const flyingBird = document.querySelector('.flying-bird');
+let birdHasFlown = false;
+
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.pageYOffset;
+    const windowHeight = window.innerHeight;
+    
+    // Trigger bird when user scrolls down about 30% of the page
+    if (scrollPosition > windowHeight * 0.3 && !birdHasFlown) {
+        flyingBird.classList.add('active');
+        birdHasFlown = true;
+        
+        // Reset after animation completes (8 seconds)
+        setTimeout(() => {
+            flyingBird.classList.remove('active');
+            // Allow bird to fly again after scrolling more
+            setTimeout(() => {
+                birdHasFlown = false;
+            }, 5000);
+        }, 8000);
+    }
+});
