@@ -74,26 +74,57 @@ if (newsletterForm) {
     });
 }
 
-// Flying Bird Animation on Scroll
+// Flying Bird Animation - Scroll-based with direction changes
 const flyingBird = document.querySelector('.flying-bird');
-let birdHasFlown = false;
+let birdDirection = 1; // 1 = left to right, -1 = right to left
+let lastDirectionChange = Date.now();
 
-window.addEventListener('scroll', () => {
+function updateBirdPosition() {
     const scrollPosition = window.pageYOffset;
     const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth;
+    const documentHeight = document.documentElement.scrollHeight;
     
-    // Trigger bird when user scrolls down about 30% of the page
-    if (scrollPosition > windowHeight * 0.3 && !birdHasFlown) {
-        flyingBird.classList.add('active');
-        birdHasFlown = true;
+    // Show bird after scrolling 10% down the page
+    if (scrollPosition > windowHeight * 0.1) {
+        // Calculate vertical position based on scroll (moves down as you scroll)
+        const scrollProgress = scrollPosition / (documentHeight - windowHeight);
+        const verticalPosition = 15 + (scrollProgress * 70); // 15% to 85% of viewport height
         
-        // Reset after animation completes (8 seconds)
-        setTimeout(() => {
-            flyingBird.classList.remove('active');
-            // Allow bird to fly again after scrolling more
-            setTimeout(() => {
-                birdHasFlown = false;
-            }, 5000);
-        }, 8000);
+        // Calculate horizontal position based on scroll and direction
+        const horizontalProgress = (scrollPosition % 2000) / 2000; // Creates back and forth motion
+        let horizontalPosition;
+        
+        if (birdDirection === 1) {
+            // Moving left to right
+            horizontalPosition = horizontalProgress * 100;
+        } else {
+            // Moving right to left
+            horizontalPosition = 100 - (horizontalProgress * 100);
+        }
+        
+        // Apply position
+        flyingBird.style.left = horizontalPosition + '%';
+        flyingBird.style.top = verticalPosition + '%';
+        
+        // Check if it's time to flip direction (every 3 seconds)
+        const currentTime = Date.now();
+        if (currentTime - lastDirectionChange > 3000) {
+            birdDirection *= -1; // Flip direction
+            lastDirectionChange = currentTime;
+            
+            // Toggle flipped class for image flip
+            if (birdDirection === -1) {
+                flyingBird.classList.add('flipped');
+            } else {
+                flyingBird.classList.remove('flipped');
+            }
+        }
     }
-});
+}
+
+// Update bird position on scroll
+window.addEventListener('scroll', updateBirdPosition);
+
+// Also update on interval to handle direction changes when not scrolling
+setInterval(updateBirdPosition, 100);

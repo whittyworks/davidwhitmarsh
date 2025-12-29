@@ -830,50 +830,16 @@ footer p {
     height: auto;
     z-index: 999;
     pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.flying-bird.active {
-    opacity: 1;
-    animation: flyAcross 8s ease-in-out forwards;
+    transition: transform 0.5s ease;
+    will-change: transform, left, top;
 }
 
 .flying-bird img {
     width: 100%;
     height: auto;
-    animation: bobbing 1.5s ease-in-out infinite;
+    transition: transform 0.5s ease;
 }
 
-@keyframes flyAcross {
-    0% {
-        left: -200px;
-        top: 20%;
-        transform: rotate(-10deg);
-    }
-    25% {
-        top: 15%;
-    }
-    50% {
-        left: 50%;
-        top: 25%;
-        transform: rotate(5deg);
-    }
-    75% {
-        top: 20%;
-    }
-    100% {
-        left: 110%;
-        top: 15%;
-        transform: rotate(10deg);
-    }
-}
-
-@keyframes bobbing {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
+.flying-bird.flipped img {
+    transform: scaleX(-1);
 }
