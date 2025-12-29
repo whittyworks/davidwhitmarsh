@@ -830,16 +830,16 @@ footer p {
     height: auto;
     z-index: 999;
     pointer-events: none;
-    transition: transform 0.5s ease;
+    transition: left 0.1s linear, top 0.1s linear;
     will-change: transform, left, top;
 }
 
 .flying-bird img {
     width: 100%;
     height: auto;
-    transition: transform 0.5s ease;
+    transition: transform 0s; /* Instant flip when off-screen */
 }
 
 .flying-bird.flipped img {
-    transform: scaleX(-1);
+    transform: scaleX(-1); /* Mirror the bird */
 }
