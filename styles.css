@@ -175,7 +175,7 @@ nav {
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
-    animation: fadeInUp 1s ease-out;
+    animation: heroFadeInUp 1s ease-out;
     padding-top: 3rem;
 }
 
@@ -187,6 +187,17 @@ nav {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes heroFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
     }
 }
 
@@ -1003,17 +1014,20 @@ footer p {
 
     .hero-content {
         position: absolute;
-        padding: 0.1rem;
+        padding: 1rem;
         padding-top: 0;
         max-width: 100%;
         left: 50%;
         transform: translateX(-50%);
         top: 0;
+        margin-top: -0.5rem;
     }
 
     .hero h1 {
         font-size: 1.75rem;
         line-height: 1.3;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
     }
 
     .hero .nowrap {
@@ -1023,7 +1037,8 @@ footer p {
     .hero-description {
         font-size: 0.95rem;
         max-width: 100%;
-        line-height: 1.6;
+        line-height: 1.5;
+        margin-top: 0.25rem;
     }
 
     .hero-photo-credit {
