@@ -166,11 +166,13 @@ nav {
     text-align: center;
     max-width: 900px;
     padding: 2rem;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 2;
     animation: fadeInUp 1s ease-out;
-    margin-bottom: auto;
-    padding-top: 2rem;
+    padding-top: 3rem;
 }
 
 @keyframes fadeInUp {
