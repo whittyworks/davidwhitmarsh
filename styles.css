@@ -1002,11 +1002,11 @@ footer p {
     }
 
     .hero-content {
-        position: relative;
+        position: absolute;
         padding: 1rem;
-        padding-top: 0.1rem;
+        padding-top: 0;
         max-width: 100%;
-        left: 50;
+        left: 50%;
         transform: translateX(-50%);
         top: 0;
     }
